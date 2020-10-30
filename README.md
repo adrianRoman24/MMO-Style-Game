@@ -16,7 +16,7 @@ without having to specify the race of hero1 or hero2 because I used polymorphism
 dynamic. I left the name visit and I accept to be clear, but I accept the method
 could be translated as "the hero receives damage" and the visit method as "the hero gives damage".
 
-    The program has three main stages:
+#    The program has three main stages:
     
 1. Reading / retrieving input data
 2. Development of the game
