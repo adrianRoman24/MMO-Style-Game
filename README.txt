@@ -2,19 +2,18 @@ MMO style action game
 
 Description of the first part of the project:
 
-    I used Double-Dispatch like this: Hero is a class
-abstract that is extended by the four races of heroes (Knight, Pyromancer, Rogue,
-Wizard). Each hero will visit (attack) another hero of any type, and each hero
-another hero will be attacked (accepted). The Hero class will have visiting methods
-(visit Pyromancer, visit Knight etc), these being overwritten in each subclass
-(Knight, Pyromancer, Rogue, Wizard). Each subclass has a method to visit
+    Double-Dispatch is used so: Hero is an abstract class
+that is extended by the four races of heroes (Knight, Pyromancer, Rogue,
+Wizard). Each hero will visit (attack) another hero of any type, and that hero will be attacked (accepted).
+The Hero class will have visiting methods (visit Pyromancer, visit Knight etc), these being overwritten in
+each subclass (Knight, Pyromancer, Rogue, Wizard). Each subclass has a method to visit
 for all 4 races, and each subclass has an accept method (hero) {hero.
-visit (this);}, so when the hero calls the visit method it will look at the instance
-they at runtime and not at the reference of the current class, thus realizing the polymorphism
-dynamic or double-dispatch. Methods are called in the Game class (example hero1.accept (hero2))
-without having to specify the race of hero1 or hero2 because I used polymorphism
-dynamic. I left the name visit and I accept to be clear, but I accept the method
-could be translated as "the hero receives damage" and the visit method as "the hero gives damage".
+visit (this);}, so, when the hero calls the visit method, it will look at their
+instance at runtime and not at the reference of the current class, thus realizing the dynamic polymorphism
+or double-dispatch. Methods are called in the Game class (example hero1.accept (hero2))
+without having to specify the race of hero1 or hero2 because I used dynamic polymorphism. I left the name
+visit and accept for clarity, but  the accep tmethod could be translated as "the hero receives damage"
+and the visit method as "the hero gives damage".
 
 #    The program has three main stages:
     
